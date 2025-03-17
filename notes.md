@@ -64,7 +64,33 @@ Cloud computing is widely used because of several benefits, such as:
 
 ---
 
-#### 7. Conclusion
+### Types of Cloud Computing  
+
+#### A. Based on Deployment Model  
+1. **Public Cloud** – Owned by third-party providers, accessible to anyone (e.g., AWS, Google Cloud).  
+2. **Private Cloud** – Dedicated to a single organization for security (e.g., bank data centers).  
+3. **Hybrid Cloud** – Combination of public & private clouds (e.g., sensitive data on private cloud, applications on public cloud).  
+
+#### B. Based on Service Model  
+
+1. **Infrastructure as a Service (IaaS)**  
+   - Provides virtualized computing resources (servers, storage, networking) over the internet.  
+   - Replaces physical hardware, allowing businesses to rent IT infrastructure.  
+   - **Examples:** AWS EC2, Microsoft Azure Virtual Machines, Google Compute Engine, IBM Cloud Infrastructure.  
+
+2. **Platform as a Service (PaaS)**  
+   - Offers a development environment with tools, libraries, and infrastructure for building, testing, and deploying applications.  
+   - Developers don’t need to manage servers or networking.  
+   - **Examples:** Google App Engine, Microsoft Azure App Services, AWS Elastic Beanstalk, Heroku.  
+
+3. **Software as a Service (SaaS)**  
+   - Delivers ready-to-use software applications over the internet.  
+   - No installation or maintenance required—access via a web browser.  
+   - **Examples:** Google Drive, Gmail, Google Docs, Microsoft Office 365, Dropbox, Netflix.  
+
+---
+
+#### 8. Conclusion
 Cloud computing is an essential technology that offers flexibility, scalability, and cost savings. However, it also has some security and internet dependency concerns. Despite these drawbacks, it remains one of the most widely used technologies for businesses and individuals.
 
 ---
