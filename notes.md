@@ -141,11 +141,17 @@ Parallel and distributed computing are both used to enhance computational power,
 
 #### Pros & Cons of Parallel & Distributed Computing
 **Advantages:**
+
 ✔ Faster processing for big data tasks.
+
 ✔ Can solve complex problems efficiently.
+
 ✔ Ideal for AI, simulations, and real-time applications.
 
 **Disadvantages:**
+
 ❌ More expensive due to advanced hardware.
+
 ❌ Requires more power and cooling.
+
 ❌ Programming for parallel architecture is complex.
