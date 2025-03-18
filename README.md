@@ -367,3 +367,74 @@ If multiple users or processes access shared data at the same time, it can cause
 
 ### Easy Way to Remember:
 - **Fault tolerance is like a backup generator** – If the power goes out, the generator keeps things running.
+
+---
+
+# Chapter 04
+
+## 1. GPU Architecture and Programming
+
+### Definition
+- **CPU (Central Processing Unit)**: Designed to handle a wide range of tasks quickly but is limited in the number of tasks it can handle concurrently.
+- **GPU (Graphics Processing Unit)**: A specialized processor designed to handle multiple tasks simultaneously, especially tasks related to graphics, video processing, and parallel computing.
+- Unlike a CPU, which is optimized for general-purpose tasks, a GPU is designed for high-speed parallel processing.
+- **GPU Concepts**: GPUs use similar concepts to CPUs, such as ALUs (Arithmetic Logic Units), L1 and L2 caches, and pipelined designs. They also handle threads, but on a much larger scale compared to CPUs.
+
+### CPU vs. GPU Architecture
+
+| Feature | CPU (Central Processing Unit) | GPU (Graphics Processing Unit) |
+|---------|-----------------------------|-----------------------------|
+| Designed For | General-purpose computing | Graphics rendering, parallel tasks |
+| Processing Cores | Fewer, but powerful cores | Thousands of smaller cores |
+| Concurrency | Limited (executes fewer tasks at a time) | High (executes many tasks simultaneously) |
+| Examples | Running an operating system, web browsing | Gaming, video editing, AI, deep learning |
+
+### Where is GPU Used?
+✔ Gaming & Graphics Rendering (NVIDIA, AMD GPUs).  
+✔ AI & Machine Learning (Training deep learning models).  
+✔ Cryptocurrency Mining (Processing blockchain transactions).  
+✔ Scientific Computing (Weather simulations, protein folding).  
+
+#### Easy Way to Remember:
+- **CPU** = "Brain" of the computer (handles general tasks).
+- **GPU** = "Muscles" of the computer (does heavy processing in parallel).
+
+## 2. Heterogeneity
+
+### Definition
+- **Heterogeneous Computing System**: A system that includes different types of computational units, such as multicore CPUs, GPUs, DSPs (Digital Signal Processors), and FPGAs (Field-Programmable Gate Arrays).
+
+### Key Aspects:
+- **Transparency**: Users should not need to be aware of the underlying complexity.
+- **Openness**: Systems should be open to different types of hardware and software.
+- **Concurrency**: Ability to handle multiple tasks simultaneously.
+- **Security**: Ensuring data and processes are secure.
+- **Scalability**: Ability to scale resources up or down based on demand.
+- **Failure Handling**: Systems should be able to handle failures gracefully.
+
+### Example:
+A self-driving car uses heterogeneous computing:  
+- **CPU** for decision-making.  
+- **GPU** for image recognition.  
+- **DSPs** for signal processing from sensors.  
+
+## 3. Introduction to OpenCL
+
+- **OpenCL (Open Computing Language)**: A framework for writing programs that execute across heterogeneous platforms, including CPUs, GPUs, DSPs, and FPGAs.
+- **Purpose**: OpenCL allows developers to write applications that can use multiple types of devices for processing, making it a versatile tool for parallel computing.
+- **Cross-Platform Support**: OpenCL is an open standard that supports data parallel compute on both CPUs and GPUs, enabling efficient use of hardware resources.
+
+## 4. Message Passing Interface (MPI)
+
+- **MPI (Message Passing Interface)**: A standardized system for message passing in distributed and parallel computing environments.
+- **Purpose**: MPI provides a portable and efficient standard for message passing, allowing different processes to communicate with each other.
+- **Two-Sided Operation**:
+  - **Sending Process**: Describes the data to be sent.
+  - **Receiving Process**: Describes how to receive the message.
+- **Language Support**: MPI is implemented in various programming languages such as Fortran, C, C++, and Java, making it widely used in parallel computing.
+
+## Summary
+✔ **GPU vs. CPU**: GPU has many small cores for parallel processing; CPU has fewer, powerful cores for general tasks.  
+✔ **Heterogeneous Computing**: Uses different processors (CPU, GPU, DSP) to improve performance.  
+✔ **OpenCL**: Allows programs to run on multiple hardware types (CPUs, GPUs, FPGAs).  
+✔ **MPI**: A system for message-based communication between multiple processors.  
