@@ -182,7 +182,7 @@ Parallel and distributed computing are both used to enhance computational power,
 
 ❌ Programming for parallel architecture is complex.
 
-
+---
 # Chapter 02
 
 ## 1. Flynn’s Taxonomy
@@ -302,3 +302,68 @@ A parallel programming model defines how parallel tasks interact with each other
 
 📌 **Distributed Shared Memory:** Makes distributed computing feel like shared memory.
 
+
+---
+# Chapter 03
+
+## 1. Asynchronous vs. Synchronous Computation & Communication
+
+- **Synchronous Communication:** This involves real-time interactions where tasks or communications happen simultaneously. For example, a live video call where all participants are present at the same time.
+- **Asynchronous Communication:** This happens independently of real-time interaction. Participants can respond at their convenience, like email communication.
+- **Synchronous Execution:** In programming, tasks are executed one after another. A task must complete before the next one starts.
+- **Asynchronous Execution:** Tasks can run in parallel. A new task can start without waiting for the previous one to finish, improving efficiency and resource utilization.
+
+### Key Differences
+
+| Feature         | Synchronous | Asynchronous |
+|----------------|------------|--------------|
+| Execution      | One task must finish before the next starts. | Multiple tasks can run at the same time. |
+| Waiting Time   | Tasks must wait for others to complete. | No waiting, tasks run simultaneously. |
+| Example (Daily Life) | Phone call, video call (real-time communication). | Email, WhatsApp messages (no need to respond immediately). |
+| Example (Computing)  | Database query that waits for a response before proceeding. | Downloading a file while browsing the internet. |
+
+### Easy Way to Remember:
+- **Synchronous =** Waiting in a queue to buy tickets (you must wait for your turn).
+- **Asynchronous =** Ordering online (your order is processed while you do other things).
+
+## 2. Concurrency Control
+
+### Definition
+- **Concurrency control** is a technique used to manage multiple tasks that try to access and modify the same resource/data simultaneously, ensuring data consistency and avoiding errors.
+
+### Why is Concurrency Control Needed?
+If multiple users or processes access shared data at the same time, it can cause data inconsistency or incorrect results.
+
+#### Example (Bank ATMs):
+- Imagine two people trying to withdraw ₹5000 at the same time from different ATMs.
+- If there is no Concurrency Control, both transactions might process simultaneously, causing incorrect balance updates.
+- **Concurrency Control** ensures that one transaction is completed before another modifies the same data.
+
+### Concurrency Control Techniques:
+1. **Locking Mechanism** – Prevents multiple processes from accessing the same resource at the same time.
+2. **Timestamp Ordering** – Ensures tasks execute in the correct order based on timestamps.
+3. **Optimistic Concurrency Control** – Allows tasks to proceed without locks but verifies data before committing changes.
+
+### Easy Way to Remember:
+- **Concurrency control is like traffic lights** – It prevents cars (processes) from crashing into each other at intersections.
+
+## 3. Fault Tolerance
+
+### Definition
+- **Fault tolerance** is the ability of a system to continue functioning even when some of its components fail.
+
+### Why is Fault Tolerance Important?
+- Prevents system crashes and data loss in case of hardware/software failures.
+- Ensures high availability and reliability in critical applications.
+
+### Examples of Fault Tolerance:
+✔ **Cloud Computing:** If one server fails, another takes over (e.g., AWS, Google Cloud).
+
+✔ **Airplane Systems:** If one engine fails, the plane can still fly with the remaining engines.
+
+✔ **RAID Storage (Redundant Array of Independent Disks):** Data is copied to multiple disks, so if one fails, the data remains safe.
+
+✔ **Self-Driving Cars:** If one sensor fails, the system still uses other sensors to make driving decisions.
+
+### Easy Way to Remember:
+- **Fault tolerance is like a backup generator** – If the power goes out, the generator keeps things running.
