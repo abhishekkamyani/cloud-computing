@@ -181,3 +181,124 @@ Parallel and distributed computing are both used to enhance computational power,
 ❌ Requires more power and cooling.
 
 ❌ Programming for parallel architecture is complex.
+
+
+# Chapter 02
+
+## 1. Flynn’s Taxonomy
+**Definition:** Flynn’s taxonomy is a classification system for computer architecture proposed by Michael J. Flynn in 1966 and extended in 1972. It categorizes computers based on how they handle instructions and data streams in parallel computing.
+
+### Flynn’s Four Types of Computer Architectures:
+| Type  | Description  | Example  |
+|---|---|---|
+| SISD (Single Instruction, Single Data) | One processor executes one instruction at a time on a single data set. | Single-core CPU. |
+| SIMD (Single Instruction, Multiple Data) | Executes the same instruction on multiple data points simultaneously. | GPU image processing. |
+| MISD (Multiple Instruction, Single Data) | Multiple instructions operate on a single data stream. This is rare and mostly theoretical. | Fault-tolerant systems. |
+| MIMD (Multiple Instruction, Multiple Data) | Multiple processors execute different instructions on different data streams. | Multi-core processors. |
+
+## 2. Introduction to Multithreading
+### What is Multithreading?
+- Multithreading is a technique where a program is divided into multiple "threads", which run simultaneously.
+- A thread is a lightweight unit of a process that can execute independently.
+- **Concurrency:** Threads can run independently but share process resources like memory.
+
+### How It Works?
+- In a **single-threaded** program, tasks execute one after another.
+- In a **multi-threaded** program, tasks run concurrently, improving efficiency.
+
+### Examples of Multithreading:
+- Web browsers (Multiple tabs open at once).
+- Video games (Game physics, AI, rendering handled separately).
+- Operating systems (Handling multiple applications at the same time).
+
+**Key Point:** Multithreading improves performance by running multiple tasks in parallel.
+
+## 3. Parallel Algorithms & Architectures
+### What are Parallel Algorithms?
+A parallel algorithm performs multiple operations at the same time instead of executing them sequentially like traditional algorithms.
+
+### Examples of Parallel Algorithms:
+- Newton’s method (used in AI and machine learning).
+- Parallel sorting algorithms (e.g., parallel merge sort).
+- Simulations (weather forecasting, physics calculations).
+
+### Parallel Architectures:
+Multiple processors working together to solve the same problem.
+- **Shared Memory:** Multiple processors share one memory space.
+- **Distributed Memory:** Each processor has its own memory, and they communicate via a network.
+
+**Key Point:** Parallel algorithms reduce execution time by splitting tasks among multiple processors.
+
+## 4. Parallel I/O (Input/Output)
+### What is Parallel I/O?
+- Instead of processing I/O operations one at a time (serially), parallel I/O handles multiple I/O operations simultaneously.
+- Used in supercomputers, cloud storage, and large databases.
+
+### Example:
+- A high-speed database system handling thousands of user queries at the same time.
+- Writing multiple files to storage devices simultaneously.
+
+**Key Point:** Parallel I/O speeds up data storage and retrieval, making computers more efficient.
+
+## 5. Parallel Programming Models
+A parallel programming model defines how parallel tasks interact with each other and how resources are shared.
+
+| Model  | Description  | Example  |
+|---|---|---|
+| Data Parallelism | Executes the same task on multiple data sets at the same time. | Processing large datasets on multiple cores. |
+| Task Parallelism | Executes different tasks on different processors at the same time. | Running multiple programs at once. |
+| Bit-Level Parallelism | Increases processor word size to process more data at once. | Modern CPUs processing 64-bit instructions. |
+| Instruction-Level Parallelism | Executes multiple instructions simultaneously. | Pipelined processors in modern computers. |
+
+## 6. Memory Models: Shared vs. Distributed Memory
+### Shared Memory Model:
+- All processors share a common memory.
+- Fast communication between processors.
+- **Example:** Multi-core processors in modern computers.
+
+### Distributed Memory Model:
+- Each processor has its own private memory.
+- Processors communicate via messages over a network.
+- **Example:** Cloud computing, supercomputers.
+
+## 7. Process-Centric Architecture (PCA)
+### What is PCA?
+- A process-centric architecture moves the abstraction level higher by organizing tasks based on process logic rather than hardware.
+
+### Why is PCA Important?
+- Improves efficiency in distributed computing.
+- Reduces complexity by focusing on task execution instead of low-level system management.
+
+**Key Point:** PCA helps in managing complex systems by focusing on high-level process execution.
+
+## 8. Distributed Shared Memory (DSM)
+### What is DSM?
+- DSM allows multiple processors to access a shared memory space, even though they are physically distributed.
+- This makes distributed computing feel like a single shared memory system.
+
+### Advantages of DSM:
+
+✔ Simplifies programming for distributed systems.
+
+✔ Reduces data transfer costs.
+
+**Key Point:** DSM makes it easier to manage memory in distributed computing systems.
+
+## Conclusion (Quick Revision for Exams)
+
+📌 **Flynn’s Taxonomy:** Classifies architectures into SISD, SIMD, MISD, MIMD.
+
+📌 **Multithreading:** Allows multiple tasks to run simultaneously in one process.
+
+📌 **Parallel Algorithms:** Solve problems faster using multiple processors.
+
+📌 **Parallel I/O:** Reads/writes data to storage simultaneously.
+
+📌 **Parallel Programming Models:** Includes bit-level, instruction-level, data, and task parallelism.
+
+📌 **Shared vs. Distributed Memory:** Shared → Fast, limited scalability. Distributed → Scalable, slower.
+
+📌 **Process-Centric Architecture:** Focuses on high-level process execution.
+
+📌 **Distributed Shared Memory:** Makes distributed computing feel like shared memory.
+
